@@ -33,14 +33,6 @@ pipeline {
             }
         }
 
-        stage('Deploy to ECS') {
-            steps {
-                script {
-                    sh "./ci/deploy.sh ${currentVersion} experiment-nginx:${currentVersion}"
-                }
-            }
-        }
-
     }
 
 }
